@@ -5,11 +5,11 @@ navbar:
     - text: "O kursu"
       href: index.html
     - text: "Uvod"
-      href: Journal.html
+      href: uvod.html
     - text: "Eksperiment i ishod eksperimenta"
-      href: Links.html
+      href: eksperiment.html
     - text: "Događaj i verovatnoća događaja"
-      href: dog.html
+      href: dogadjaj.html
     - text: "Matematičko očekivanje"
       href: ocekivanje.html
     - text: "Relacije na skupovima"
