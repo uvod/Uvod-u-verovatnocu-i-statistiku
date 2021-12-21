@@ -8,6 +8,6 @@ navbar:
       href: Journal.html
     - text: "Eksperiment i ishod eksperimenta"
       href: Links.html
-    - text: "Eksperiment i ishod eksperimenta"
-      href: Links.html
+    - text: "Događaj i verovatnoća događaja"
+      href: dog.html
 output_dir: "docs"

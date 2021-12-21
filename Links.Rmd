@@ -1,5 +1,5 @@
 ---
-title: "Resources"
+title: ""
 output: html_document
 ---
 Kako dolazimo do saznanja o prirodi i spoljašnjem svetu? Ljudi su oduvek želeli da razumeju pravilnosti i zakone po kojima sve oko nas funkcioniše.  Pretpostavimo, na primer, da nas neko pita kako znamo da postoji gravitaciona sila. Većina nas bi verovatno uzela predmet i pustila ga da padne na pod. Ako to ne ubedi našeg sagovornika, mogli bismo postupak da _ponovimo_ _vise puta, pod istim uslovima._ Na taj način bismo izveli seriju *eksperimenata*.
