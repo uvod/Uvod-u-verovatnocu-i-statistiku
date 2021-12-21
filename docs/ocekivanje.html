@@ -11,7 +11,7 @@
 
 
 
-<title>Links.knit</title>
+<title>ocekivanje.knit</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -284,77 +284,53 @@ $(document).ready(function () {
 </div>
 
 
-<p>Kako dolazimo do saznanja o prirodi i spoljašnjem svetu? Ljudi su oduvek želeli da razumeju pravilnosti i zakone po kojima sve oko nas funkcioniše. Pretpostavimo, na primer, da nas neko pita kako znamo da postoji gravitaciona sila. Većina nas bi verovatno uzela predmet i pustila ga da padne na pod. Ako to ne ubedi našeg sagovornika, mogli bismo postupak da <em>ponovimo</em> <em>vise puta, pod istim uslovima.</em> Na taj način bismo izveli seriju <em>eksperimenata</em>.</p>
-<p>Eksperiment je naučna metoda u kojoj simuliramo uslove da bismo utvrdili postojanje ili posmatrali neku pojavu. On se može ponavljati više puta, pod istim uslovima. Može se izvoditi u prirodi ili u laboratoriji.</p>
-<p><img src="experiment.jpg" /> Kako biste na času fizike došli do zaključka da je vatri potreban kiseonik da bi gorela? Najverovatnije biste izveli eksperiment sa dve sveće, pri čemu biste jednu poklopili, a drugu ostavili otkrivenu. Ubrzo, samo druga sveća bi ostala da gori, dok bi se prva ugasila. Na isti način znamo da npr. papir pluta a kamenčići tonu. I te tvrdnje jako lako možemo proveriti eksperimentima.</p>
-<p><img src="plamen.jpg" /></p>
 <p><br></p>
-<p><strong>Eksperimenti u verovatnoći</strong></p>
-<p>Slučajan eksperiment je eksperiment koji ima sledeća svojstva: * Unapred je definisano šta se smatra ishodom eksperimenta * Poznat je skup svih mogućih ishoda, tj. prostor ishoda (oznaka-<span class="math inline">\(\Omega\)</span>) * Ishod nije unapred poznat * Može se ponavljati proizvoljan broj puta pod istim uslovima</p>
+<p>Da bismo razumeli pojam očekivane vrednosti, tj. očekivanja, objasnićemo ga na svakodnevnom primeru vremenske prognoze:</p>
 <p><br></p>
-<p><em>Primeri</em></p>
-<ol style="list-style-type: decimal">
-<li>Bacanje novčića.</li>
-</ol>
-<ul>
-<li>Ishodi ovog eksperimenta su da padne pismo ili glava</li>
-<li>Skup mogućih ishoda je P-pismo I G-plava, tj <span class="math inline">\(\Omega\)</span> ={P,G}</li>
-<li>Kao što smo naglasili u uvodu, za oba ishoda postoji određena verovatnoća sa kojom se realizuje, i ne znamo ishod unapred</li>
-<li>Možemo da bacimo novčić proizvoljan broj puta</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Bacanje kockice sa 6 strana.</li>
-</ol>
-<ul>
-<li>Ishodi ovog eksperimenta su da padne neki od brojeva od 1 do 6</li>
-<li><span class="math inline">\(\Omega\)</span>= {1,2,3,4,5,6}</li>
-<li>Takođe, ne znamo koji broj će pasti, tj ne znamo ishod unapred jer je verovatnoća svakog po 1/6</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Podsetimo se vežbe iz uvodne teme u kojoj se izvodilo 10 serija po 4 bacanja kockice. Vaš zadatak je bio da zabeležite seriju u kojoj ste dobili bar jednu šesticu. Takvu seriju smo zvali uspešnom a u suprotnom neuspešnom. Na taj način izveli smo jedan eksperiment.</li>
-</ol>
-<ul>
-<li>Mogući ishodi su da je serija uspešna ili neuspešna</li>
-<li><span class="math inline">\(\Omega\)</span> ={U,N}, gde je U-uspeh, N-neuspeh.</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>U fabrici se dnevno proizvodi 100 sijalica. Radnik broji neispravne sijalice.</li>
-</ol>
-<ul>
-<li>Mogući ishodi su svi brojevi od 0 do 100</li>
-<li><span class="math inline">\(\Omega\)</span> ={1,2,3,4,…,98,99,100}</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li>Konstruisali smo proizvoljan trougao i odlučili da izmerimo jedan njegov ugao, pritom zaokružujući na najbliži ceo broj</li>
-</ol>
-<ul>
-<li><span class="math inline">\(\Omega\)</span> ={1,2,3,…177,178,179}</li>
-</ul>
-<ol start="6" style="list-style-type: decimal">
-<li>U kutiji se nalazi 10 kuglica – 4 plave,3 žute i 3 crvene boje. Iz kutije vadimo istovremeno 2 kuglice</li>
-</ol>
-<ul>
-<li>Ako sa P označimo plavu, Ž-žutu I C-crvenu kuglicu, tada je:<span class="math inline">\(\Omega\)</span> ={PŽ, PC,PP,ŽŽ,ŽC,CC}</li>
-</ul>
-<ol start="7" style="list-style-type: decimal">
-<li>Na času fizičkog se trči na 30m i peticu dobijaju oni učenici koji istrče zadatu udaljenost za manje od 7 sekudi. Ako je u razredu 30 đaka, a mi beležimo one koji su dobili 5, opisati skup svih mogućih ishoda</li>
-</ol>
-<ul>
-<li>Kako bilo koji od učenika može da dobije 5, <span class="math inline">\(\Omega\)</span> ={0,1,2,3,….,29,30}</li>
-</ul>
+<p><strong>Primer 4.1</strong> U jednoj ostrvskoj državi je u poslednjih 7 godina izmerena prosečna temperatura u julu, i ti podaci su uneti u tabelu:</p>
+<p><img src="tabela2.png" /></p>
+<p>Na osnovu datih podataka, kolika će biti prosečna temperatura u julu naredne godine u datoj državi? Na koji način biste izračunali prosečnu temperaturu u poslednjih 7 godina?<br />
+Na osnovu tabele, možemo zaključiti da se temperatura u poslednjih 10 godina kretala od 15.7 stepeni do 18.7 stepeni, i možemo da pretpostavimo da će i ostati u tom opsegu.<br />
+Da bismo došli do odgovora na prvo pitanje, hajde da probamo da odbacimo neke manje verovatne vrednosti. Na primer, verujemo da je svima jasno da je najmanja verovatnoća da se ponove najmanje i najveće vrednosti iz tabele, kao i da se pojave vrednosti van opsega. Te vrednosti smatramo ekstremnim i kao takve, možemo pretpostaviti da se neće baš uskoro ponoviti.</p>
+<p>Ovo razmatranje nas navodi da pomislimo na broj koji je bliži sredini, odnosno da je najverovatnije da će se naredne godine pojaviti takav broj, ili neki koji je njemu blizak.<br />
+Sada možemo I da damo odgovor : broj do kog smo došli zovemo očekivana vrednost (u oznaci E) i u ovom primeru nju računamo prema sledećoj formuli :</p>
+<p><span class="math display">\[
+E_T=\frac{15.7+16.9+16.5+18.7+17.6+15.7+17.6}{7}
+\]</span></p>
+<p><span class="math display">\[
+=15.7*\frac{1}{7}+16.9*\frac{1}{7}+16.5*\frac{1}{7}+18.7*\frac{1}{7}+17.6*\frac{1}{7}+15.7*\frac{1}{7}+17.6*\frac{1}{7}
+\]</span> Gde je T oznaka za prosečnu temperaturu u mesecu julu.</p>
 <p><br></p>
-<p><em>Zadaci</em>:</p>
-<p><strong>2.1</strong> Baca se kocka za igru i ako padne broj manji od 3, kocka se baca još jednom. Odrediti skup ishoda. <br> Rešenje. Mogući ishodi su <span class="math inline">\(\Omega\)</span> ={{1,1}, {1,2}, {1,3}, {1,4}, {1,5}, {1,6}, {2,1}, {2,2}, {2,3}, {2,4}, {2,5}, {2,6}, {3}, {4}, {5}, {6}}.</p>
+<p>Formalno, očekivanu vrednost, ili matematičko očekivanje možemo definisati kao zbir verovatnoće svakog ishoda pomnožene sa vrednošću tog ishoda. Strogo govoreći, prethodni primer nije skroz precizan, već služi idejno, da bismo videli način na koji koristimo očekivanje - kao neku vrstu predviđanja budućih vrednosti. Posmatramo drugi red formule i uočavamo da sabiramo proizvod <span class="math inline">\(\frac{1}{7}\)</span> (verovatnoću da uzmemo vrednost iz 2015. Godine) i 15.7 (vrednost temperature za tu godinu) sa ostalim sabircima koji su nastali na isti način.</p>
 <p><br></p>
-<p><strong>2.2</strong> Istovremeno se baca jedna kockica za igru i jedan novčić. Odrediti skup ishoda. <br> Rešenje. <span class="math inline">\(\Omega\)</span> ={1P, 2P, 3P, 4P, 5P, 6P, 1G, 2G, 3G, 4G, 5G, 6G}, gde je P-pismo a G-glava.</p>
+<p><strong>Primer 4.2</strong> Učenici rade test koji ima 20 pitanja na zaokruživanje. Za svaki odgovor postoje 4 opcije – a), b), c) i d). Jedan učenik je rešio da na sva pitanja zaokruži isti odgovor, pod a). Sa kojom verovatnoćom će učenik dati tačan odgovor na proizvoljno pitanje? Koji je očekivan broj pitanja na koja će dati tačan odgovor?</p>
 <p><br></p>
-<p><strong>2.3</strong> Bacaju se dva novčića istovremeno. Koji su mogući ishodi? <br> Rešenje. <span class="math inline">\(\Omega\)</span> ={PG,PP,GG} gde je P-pismo a G-glava.</p>
+<p>Rešenje. Neka je A – događaj da je izabran odgovor tačan. Verovatnoća događaja A je : <span class="math inline">\(P_A = \frac{1}{4}\)</span> , jer od 4 opcije samo je jedan tačan odgovor, tj. samo jedan ishod je povoljan.</p>
+<p>Rekli smo da je očekivanje zbir proizvoda verovatnoća ishoda i odgovarajuće vrednosti. U ovom primeru, verovatnoća je za svako pitanje jednaka i to baš <span class="math inline">\(P_A\)</span>, a vrednost tog ishoda je 1(ako je odgovor tačan) , odnosno 0 (ako odgovor nije tačan) jer računamo broj tačnih odgovora.</p>
+<p><span class="math inline">\(E_O= \frac{1}{4}*1*20=5\)</span>, gde je O broj tačnih odgovora na testu.</p>
+<p>Dakle, očekivana vrednopst broja tačnih odgovora na testu je 5.</p>
+<p>Do sada smo viđali samo primere gde je verovatnoća svakog ishoda jednaka.</p>
 <p><br></p>
-<p><strong>2.4</strong> Novčić se baca do prve pojave glave, a najviše četiri puta. Odrediti prostor ishoda. <br> Rešenje. <span class="math inline">\(\Omega\)</span> ={G,PG,PPG,PPPG,PPPP}.</p>
+<p><strong>Primer 4.3</strong> Upravnik restorana je nakon analize nedeljnih prihoda, zaključio da njegov prihod ima verovatnoće date u sledećoj tabeli. Naći očekivanu vrednost prihoda restorana.</p>
+<p><img src="tabela3.png" /> <br> Rešenje: Prema formuli, računamo prvo proizvod verovatnoće pojedinačnog ishoda i vrednost tog ishoda, koje na kraju saberemo. <span class="math inline">\(E_P=0*0.8+10000*0.12+20000*0.3+35000*0.45+50000*0.05=25450\)</span></p>
+<p>Gde je P - nedeljni prihod restorana.</p>
 <p><br></p>
-<p><strong>2.5</strong> Na trci Formule 1 trka se 20 vozača. Ako beležimo poziciju koju je zauzeo proizvoljan vozač na kraju trke, koji ishodi su mogući? <br> Rešenje. Kako ima 20 vozača, proizvodljni vozač može da završi na bilo kom od tih 20 mesta, dakle <span class="math inline">\(\Omega\)</span> = {1,2,3,4….,15,16,17,18,19,20}.</p>
+<p>Pojam matematičkog očekivanja tj. očekivane vrednosti može da ima veliku primenu u donošenju odluka, što naredni primer dobro ilustruje.</p>
 <p><br></p>
-<p><strong>2.6</strong> U kutiji se nalazi 20 papirića na kojima su napisani prvih 20 brojeva. Izvlači se jedan papirić i registruje se samo ukoliko je izvučen prost broj, inače se papirić vraća u kutiju. Odrediti prostor ishoda eksperimenta. <br> Rešenje. <span class="math inline">\(\Omega\)</span> ={2, 3, 5, 7, 11, 13, 17, 19}.</p>
+<p><strong>Primer 4.4</strong> Pretpostavimo da je upravniku restorana iz primera 4.3 ponuđeno da radi u drugom restoranu, gde je nedeljni prihod 32000, a gde bi imao isti udeo kao i na trenutnom random mestu. Da li upravnik na osnovu zarade treba da prihvati novi posao, ili treba da ostane na starom? <br> Rešenje. Kako je 32000 veći prihod od očekivanog prihoda na starom poslu (izračunat u primeru 4.3), zaključujemo da upravnik treba da prihvati novi posao.</p>
+<p><br></p>
+<p><strong>Primer 4.5</strong> Na osnovu prethodnog iskustva, radnici Narodne biblioteke u Beogradu znaju da korisnici uzimaju određen broj knjiga sa verovatnoćama datim u tabeli. Izračunati matematičko očekivanje broja uzetih knjiga.</p>
+<p><img src="tabela4.png" /> Rešenje. Na već poznat način, množimo verovatnoće sa vrednostima iz prvog reda tabele: <span class="math display">\[E_B=0*0.15+1*0.35+2*0.25+3*0.15+4*0.05+5*0.05=1,75\]</span> Dakle, možemo pretpostaviti da je očekivani broj 2, odnosno, da se obično uzimaju po 2 knjige.</p>
+<p><br></p>
+<p><strong>Primer 4.6</strong> Društvo je smisilo igru sa sledećim pravilima: Jedna osoba baca kockicu i ako padne 1, 2, 3 ili 4, dobija 50 dinara, a u suprotnom, ukoliko padne 5 ili 6, gubi 80. Koja je očekivana suma novca koju će ta osoba imati na kraju igre? Da li se uopšte isplati igrati ovakvu igru? <br> Rešenje. Neka je A – događaj da je palo 1, 2, 3 ili 4 a B – događaj da je palo 5 ili 6. Verovatnoća događaja A je: <span class="math inline">\(P_A=\frac{4}{6}=\frac{2}{3}\)</span>, jer je od ukupno 6 ishoda, 4 povoljno.</p>
+<p>Neka je B – događaj da je palo 5 ili 6. Verovatnoća događaja B je <span class="math inline">\(P_B=\frac{2}{6}=\frac{1}{3}\)</span>, jer je od ukupno 6 ishoda, 2 povoljno.</p>
+<p>Očekivana vrednost sume je: <span class="math display">\[E_S=P_A*50+P_B*(-80)=2/3*50-1/3*80=6.67\]</span></p>
+<p>Dakle, kako smo dobili pozitivnu vrednost, zaključujemo da se isplati igrati ovu igru.</p>
+<p><br></p>
+<p><strong>Primer 4.7</strong> U kutiji 1 se nalazi 8 kuglica, od kojih su 6 plave a 2 crne. U kutiji 2 se nalazi 5 kuglica od kojih su 3 plave, a 2 roze. Iz obe kutije se izvlači po jedna kuglica. Koja je očekivana vrednost broja plavih kuglica?</p>
+<p>Rešenje. Ideja je da izračunamo očekivane vrednosti broja kuglica u svakoj od kutija, i da ih nakon toga saberemo. Iz kutije 1, plavu kuglicu izvlačimo sa verovatnoćom <span class="math inline">\(\frac{6}{8}=\frac{3}{4}\)</span>, jer od 8 kuglica, 6 su plave. Iz kutije 2, plavu kuglicu izvlačimo sa verovatnoćom <span class="math inline">\(\frac{3}{5}\)</span>, jer od 5 kuglica, 3 su plave.</p>
+<p>Ukupno očekivanje je jednako: <span class="math display">\[E_P=\frac{3}{4}*1+\frac{3}{5}*1= \frac{3*5+3*4}{20}=1.35\]</span></p>
+<p>Dakle, očekujemo da će se izvući 1 plava kuglica iz obe kutije.</p>
 
 
 

@@ -10,4 +10,15 @@ navbar:
       href: Links.html
     - text: "Događaj i verovatnoća događaja"
       href: dog.html
+    - text: "Matematičko očekivanje"
+      href: ocekivanje.html
+    - text: "Relacije na skupovima"
+      href: relacije.html
+    - text: "Uslovna verovatnoća"
+      href: uslovna.html
+    - text: "Populacija i uzorak"
+      href: uzorak.html
+    - text: "Grafičko predstavljanje podataka"
+      href: graficko_predstavljanje.html
+      
 output_dir: "docs"

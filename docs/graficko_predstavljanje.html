@@ -11,7 +11,7 @@
 
 
 
-<title>dog.knit</title>
+<title>graficko_predstavljanje.knit</title>
 
 <script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -284,46 +284,107 @@ $(document).ready(function () {
 </div>
 
 
-<p>Podsetimo se, svakom eksperimentu pridružujemo prostor ishoda. To je skup svih mogućih ishoda tog eksperimenta i označava se grčkim slovom <span class="math inline">\(\Omega\)</span>(sigma). Svaki podskup A skupa <span class="math inline">\(\Omega\)</span> naziva se slučajan događaj.</p>
-<p>Primer 3.1 U kutiji 1 se nalazi 10 plavih kuglica, a u kutiji 2 – 5 crvenih i 5 roze. Da li biste za događaj da se iz kutije broj 1 izvuče crvena kuglica rekli da je</p>
+<p><br></p>
+<p>U prethodnom poglavlju smo se bavili prikupljanjem podataka i objašnjavali smo najbolje(najpravilnije) načine da se to odradi. U klasičnom statističkom istraživanju naredni korak je obrada tih podataka.</p>
+<p><br></p>
+<p>Statističari koriste grafičko predstavljanje da bi bolje razumeli podatke i lakše uočili pravilnosti po kojima se oni menjaju. Na primer, možemo odmah videti koji odgovor je više zastupljen u zavisnosti od pola ili uzrasta. Na taj način je mnogo preglednije i jednostavnije doneti zaključke o podacima nego kada su predstavljeni u brojevima i procentima.</p>
+<p><br></p>
+<div id="kružni-dijagrampie-chart" class="section level3">
+<h3>Kružni dijagram(pie-chart)</h3>
+<p><br></p>
+<p>Kružni dijagram je vrsta grafičkog predstavljanja u kom su vrednosti prikazane veličinama kružnih isečaka. Što znači, veći kružni isečak – veći je udeo te veličine u ukupnom broju. Na primer, u Evropi 53% stanovnika je ženskog roda. Na kružnom dijagramu bi to izgledalo ovako:</p>
+<p><img src="Rplot2.png" /></p>
+<p><strong>Primer 7.1</strong> U jednoj stambenoj zgradi ima 8 garsonjera, 23 jednosobna, 10 dvosobnih i 9 trosobnih stanova. Nacrtati kružni dijagram(pie-chart) koji prikazuje strukturu stanova u toj zgradi.</p>
+<p><br></p>
+<p>Rešenje. Želimo da odredimo udeo(procenat) svake vrste stana. Zbog toga prvo računamo koliko ukupno ima stanova. <span class="math display">\[S=8+23+10+9=50\]</span> Udeo garsonjera izračunavamo na sledeći način</p>
+<p><span class="math inline">\(\frac{8}{50}=0.16\)</span>,odnosno 16%</p>
+<p>Udeo jednsobnih stanova je:</p>
+<p><span class="math inline">\(\frac{23}{50}=0.46\)</span>,odnosno 46%</p>
+<p>Udeo dvosobnih stanova je:</p>
+<p><span class="math inline">\(\frac{10}{50}=0.2\)</span>,odnosno 20%</p>
+<p>Dok je udeo trosobnih je 100% - (16%+46%+20%) = 18%. Hajde da to prikažemo na dijagramu:</p>
+<p><img src="Rplot1.png" /> <br></p>
+<p><strong>Primer 7.2</strong> 30 nasumično izabranih učenika je upitano koliko puta su posetili biblioteku prethode nedelje. Njihovi odgovori su dati u poljima tabele:</p>
+<p><img src="t7.png" /></p>
+<p>Analizirati odgovore i predstaviti ih kružnim dijagramom.</p>
+<p><bar></p>
+<p>Rešenje. Za početak prebrojavamo koliko odgovra ima za svaku vrednost. 5 puta je biblioteku posetilo 6 učenika. 4 puta – 5 učenika, 3 puta – 2 učenika, 2 puta - 8 učenika i jednom je u biblioteku otišlo 9 učenika. Udeo u ukupnom broju ispitanih učenika za svaku vrednost možemo videti u narednoj tabeli:</p>
+<p><img src="t8.png" /></p>
+<p>Na osnovu podataka, crtamo pie chart:</p>
+<p><img src="Rplot.png" /></p>
+<p><strong>Primer 7.3</strong> Nacrtan je kružni dijagram za broj glasova na izborima za predsednika razreda. Analizirajte ga i odgovorite na pitanja:</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Siguran</p></li>
-<li><p>Moguć</p></li>
-<li><p>Nemoguć?</p></li>
+<li><p>Ko je imao najviše glasova?</p></li>
+<li><p>Ko je imao najmanje glasova?</p></li>
+<li><p>Koji su učenici imali podjednak broj glasova?</p></li>
 </ol>
-<p>Skica problema je data na slici.</p>
-<p><img src="kutija1.jpg" /></p>
-<p>Kao što nam intuicija govori, <strong>siguran događaj</strong> je onaj koji se uvek realizuje, odnosno, onaj događaj čija je verovatnoća jednaka 1.</p>
+<p><img src="Rplot01.png" /></p>
+<p>Rešenje. a) Naviše glasova, sa udelom od 36% je imala Maja</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>Najmanje glasova, sa udelom od 9% je imao Aleksa</p></li>
+<li><p>Podjednak broj glasova, sa udelom od 14% su imali Luka i Marija</p></li>
+</ol>
 <p><br></p>
-<p><strong>Primer 3.2</strong> Događaj da se pri bacanju kockice za igru dobije prirodni broj manji od 6 je primer jednog sigurnog događaja.</p>
+<p><strong>Primer 7.4</strong> Jedna porodica je mesec dana vodila evidenciju potrošnje mesečnih primanja. Kružnim dijagramom na slici je prikazana njihova evidencija:</p>
+<p><img src="Rplot02.png" /></p>
+<p>Protumačiti dijagram i odgovoriti na sledeća pitanja:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Na šta porodica potroši najveći udeo primanja?</p></li>
+<li><p>Na šta porodica potroši najmanji udeo primanja?</p></li>
+<li><p>Koliki udeo primanja zauzima hrana?</p></li>
+</ol>
 <p><br></p>
-<p><strong>Nemoguć događaj</strong> je događaj koji se nikad neće realizovati, tj. događaj čija je verovatnoća jednaka 0.</p>
-<p>Događaj iz primera 3.1 je nemoguć.</p>
+<p>Rešenje.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Porodica najveći udeo(30%) troši na kredit.</p></li>
+<li><p>Najmanji deo primanja(7%) troši na račune.</p></li>
+<li><p>Porodica na hranu daje 20% svojih mesečnih primanja.</p></li>
+</ol>
+<p><br> <br> <br></p>
+<div id="histogram" class="section level5">
+<h5>Histogram</h5>
 <p><br></p>
-<p><strong>Moguć događaj</strong> je događaj koji može da se realizuje, ali i ne mora. To je događaj čija je verovatnoća veća od 0 ali i manja od 1.</p>
-<p><strong>Primer 3.3</strong> Događaj da se iz regularnog špila od 52 karte izvuče kralj je moguć.</p>
-<div id="verovatnoća-slučajnog-događaja" class="section level4">
-<h4>Verovatnoća slučajnog događaja</h4>
+<p>Histrogram je vrsta grafičkog predstavljanja podataka u kojem je visina stubića određena vrednostima podataka koje prikazujemo. Kao i kod kružnog dijagrama – što je viši stubić, to ta veličina ima veći udeo u ukupnom broju. Na primer, predstavljamo histogramom iste podatke iz prvog primera o udelu ženskog i muškog pola u Evropi:</p>
+<p><img src="Rplot03.png" /></p>
 <p><br></p>
-<p>Verovatnoća P proizvoljnog slučajnog događaja A je jednaka količniku broja povoljnih ishoda m i broja svih mogućih ishoda n. Ili iskazano formulom: <span class="math display">\[P_A=\frac{m}{n}\]</span></p>
-<p>Pošto je A podskup skupa <span class="math inline">\(\Omega\)</span>, povoljan ishod za A će biti svaki ishod iz <span class="math inline">\(\Omega\)</span> čija realizacija povlači realizaciju događaja A.</p>
+<p><strong>Primer 7.5</strong> U jednom istraživanju, ispitano je 210 korisnika na temu „Koju marku telefona koristite?“ Odgovori su bili: 120 – iPhone, 60 – Nokia i 30 – Samsung. Date podatke predstaviti u obliku histograma.</p>
+<p><img src="Rplot04.png" /></p>
 <p><br></p>
-<p><strong>Primer 3.4</strong> Baca se kockica za igru. Odrediti verovatnoću događaja A – pao je paran broj. <br> Rešenje. Hajde da prvo odredimo koji ishodi su povoljni. Znamo da je prostor ishoda <span class="math inline">\(\Omega\)</span>={1,2,3,4,5,6}, što znači da je ukupan broj ishoda 6, tj n=6. Povoljni ishodi za događaj A su da padne 2, 4 ili 6. Ovde možemo da vidimo da se baš realizacijom nekog od ova tri ishoda realizuje i događaj A. Odavde sledi da je m=3, jer postoje tačno 3 povoljna ishoda. Sada računamo verovatnoću događaja A prema formuli: <span class="math display">\[P_A=\frac{m}{n}=\frac{3}{6}=\frac{1}{2}\]</span></p>
-<p>Dakle, tražena verovatnoća je jednaka <span class="math inline">\(\frac{1}{2}\)</span> .</p>
+<p><strong>Primer 7.6</strong> U fabrici automobila je praćena prodaja automobila po bojama tokom 6 meseci. Dobijeni su sledeći podaci: bela boja - 16, crvena - 20, plava -4, braon – 3, zelena – 4, crna - 15, ostale – 12. Predstaviti podatke u obliku histograma</p>
+<p><br> Rešenje.</p>
+<p><img src="Rplot06.png" /></p>
 <p><br></p>
-<p><strong>Zadaci:</strong></p>
+<p><strong>Primer 7.7</strong> Na dijagramu je prikazana starost majki pri rađanju deteta prošle godine.</p>
+<p><img src="Rplot08.png" /></p>
+<p>Analizirati histogram i odgovoriti na sledeća pitanja:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>U kom godištu su majke naviše rađale decu?</p></li>
+<li><p>U kom godištu su majke najmanje rađale decu?</p></li>
+<li><p>Koliko je ukupno dece rođeno prošle godine?</p></li>
+<li><p>Koliki je procenat majki mlađih od 30?</p></li>
+</ol>
 <p><br></p>
-<p><strong>3.1</strong> Istovremeno se bacaju dve kockice. Registruju se brojevi koji padnu. Koja je verovatnoća događaja A: zbir brojeva koji padnu je jednak 4? <br> Rešenje. Kao i u prethodnom primeru, prvo računamo ukupan broj ishoda, a zatim broj povoljnih ishoda, i na kraju to menjamo u formulu verovatnoće. Prostor ishoda je <span class="math inline">\(\Omega\)</span>={{1,1}, {1,2}, {1,3}, {1,4}, {1,5}, {1,6}, {2,2}, {2,3}, {2,4}, {2,5}, {2,6}, {3,3}, {3,4}, {3,5}, {3,6}, {4,4}, {4,5}, {4,6}, {5,5}, {5,6}, {6,6}}. On ima 21 element. Povoljni ishodi : {{1,3}, {2,2}}. Dakle, postoje 2 povoljna ishoda. Verovatnoća događaja A je: <span class="math display">\[P_A=\frac{2}{21}\]</span></p>
+<p>Rešenje.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Najviše su rađale žene starosti od 25 do 29 godina.<br />
+</li>
+<li>Žene od 50 godina i više su najmanje rađale decu (1 slučaj).<br />
+</li>
+<li>Ukupno je rođeno<br />
+<span class="math display">\[11+1488+7537+15087+13003+5273+909+38+1=43345\]</span></li>
+<li>Računamo udeo koji čine majke mlađe od 30. Njih je ukupno: <span class="math display">\[11+1488+7537+15087=24121\]</span> Udeo je jednak:</li>
+</ol>
+<p><span class="math display">\[\frac{24121}{43345} = 0.5565 \]</span></p>
+<p>Odnosno 55.65%.</p>
 <p><br></p>
-<p><strong>3.2</strong> Iz regularnog špila karata izvlačimo jednu. Koja je verovatnoća događaja A - izvučena karta će biti crvene boje i B – izvučena karta je kec? <br> Rešenje. Moguć ishod je izvlačenje bilo koje od 52 karte, dakle, broj ishoda je 52. Povoljni ishodi za događaj A su izvlačenje bilo koje karte crvene boje kojih ima 26. Dakle, m=26. Računamo verovatnoću događaja A: <span class="math display">\[P_A=\frac{26}{52}=\frac{1}{2}\]</span> Povoljni ishodi za događaj B su izvlačenje bilo kog od 4 keca iz špila, tako da je m=4. Verovatnoća događaja B je: <span class="math display">\[P_B=\frac{4}{52}=\frac{1}{13}\]</span> <br></p>
-<p><strong>3.3</strong> U kutiji se nalaze 5 roze i 4 ljubičaste loptice. Iz kutije se slučajno izvlači jedna loptica. Koja je verovatnoća događaja A – izvučena je ljubičasta loptica. <br> Rešenje. Mogući ishodi su izvlačenje bilo koje od 9 loptica u kutiji – dakle, n=9. Broj povoljnih ishoda je broj ljubičastih loptica u kutiji, što je 4. Dakle, verovatnoća je jednaka: <span class="math display">\[P_A=\frac{4}{9}\]</span> <br></p>
-<p><strong>3.4</strong> Konstruisali smo proizvoljan trougao i odlučili da izmerimo jedan njegov ugao, pritom zaokružujući izmerenu vrednost na najbliži ceo broj. Koja je verovatnoća događaja A - ugao koji smo merili je tup? <br> Rešenje. Iz prethodne teme znamo da ishoda ima 179. Ugao je tup ukoliko je veći od 90 stepeni. Dakle, njegova vrednost će biti neki od brojeva {91, 92, 93,…,177,178,179}. Povoljnih ishoda ima ukupno 179-90=89 (odnosno, od 179 brojeva, ne uzimamo prvih 90). Verovatnoća je onda jednaka: <span class="math display">\[P_A=\frac{89}{179}\]</span> <br></p>
-<p><strong>3.5</strong> U kutiji se nalazi 4 kuglice – 1 plava, 2 žute i 1 crvene boje. Iz kutije vadimo istovremeno 2 kuglice. Odrediti verovatnoću događaja A – jedna od izvučenih kuglica je plava. <br> Rešenje. Ako sa P označimo plavu, Ž-žutu I C-crvenu kuglicu, skup svih mogućih ishoda je <span class="math inline">\(\Omega\)</span>={PŽ, PC, ŽŽ ,ŽC}. Dakle, n=4. Broj povoljnih ishoda je 2, odnosno, to su ishodi {PŽ,PC} Na kraju, verovatnoća je: <span class="math display">\[P_A=\frac{2}{4}=\frac{1}{2}\]</span> <br></p>
-<p><strong>3.6</strong> Baca se kockica za igru, i ako padne broj manji od 3, kockica se baca još jednom. Koja je verovatnoća događaja A – proizvod brojeva koji su pali je paran? <br> Rešenje. Broj mogućih ishoda smo već odredili. Podsećanja radi, mogući ishodi su <span class="math inline">\(\Omega\)</span>={{1,1}, {1,2}, {1,3}, {1,4}, {1,5}, {1,6}, {2,1}, {2,2}, {2,3}, {2,4}, {2,5}, {2,6}, {3}, {4}, {5}, {6}}, i njih ima ukupno 16. Povoljni ishodi su {1,2}-&gt;2, {1,4}-&gt;4, {1,6}-&gt;6, {2,1}-&gt;2,{2,3}-&gt;6, {2,4}-&gt;8, {2,5}-&gt;10, {2,6}-&gt;12, {4}, {6}. Ukupno ih ima 10. Tražena verovatnoća je jednaka: <span class="math display">\[P_A=\frac{10}{16}=\frac{5}{8}\]</span> <br></p>
-<p><strong>3.7</strong> Novčić se baca do prve pojave glave, a najviše 10 puta. Odrediti verovatnoću događaja A – pala je glava i B – novčić je bačen manje od 5 puta. <br> Rešenje. Mogući ishodi su {G, PG, PPG, PPPG, PPPPG, PPPPPG,PPPPPPG, PPPPPPPG, PPPPPPPPG,PPPPPPPPPG, PPPPPPPPPP}. Ukupno ih ima 11. Povoljni ishodi za događaj A su svi osim poslednjeg tj. svi osim {PPPPPPPPPP }. Ukupno ih ima 10. Tražena verovatnoća je <span class="math display">\[P_A=\frac{10}{11}\]</span></p>
-<p>Povoljni ishodi za događaj B su {G, PG, PPG, PPPG}. Ukupno ih je 4. Tražena verovatnoća je : <span class="math display">\[P_B=\frac{4}{11}\]</span></p>
+<p><strong>Primer 7.8 </strong>30 slučajno izabranih ljudi u šoping centru je pitano koliko poseduju kraditnih kartica. Odgovori su dati u poljima tabele:</p>
+<p><img src="t9.png" /></p>
+<p>Nacrtati histogram vrednosti prikazanih u obliku udela</p>
 <p><br></p>
-<p><strong>3.8</strong> U kutiji se nalazi 20 papirića na kojima su napisani prvih 20 brojeva. Izvlači se jedan papirić, i registruje se broj koji je na njemu zapisan. Izračunati verovatnoću događaja da je izvučen broj deljiv sa 3. <br> Rešenje. Prostor ishoda je prvih 20 brojeva, dakle, n=20. Povoljni ishodi su {3,6,9,12,15,18}, te je m=6. Ako sa A označimo događaj čiju verovatnoću tražimo, tada je: <span class="math display">\[P_A=\frac{6}{20}=\frac{3}{10}\]</span></p>
+<p>Rešenje. Napravićemo tabelu sa ukupnim brojevima po kategorijama i izračunati njihov udeo</p>
+<p><img src="t10.png" /></p>
+<p><img src="Rplot09.png" /></p>
+</div>
 </div>
 
 

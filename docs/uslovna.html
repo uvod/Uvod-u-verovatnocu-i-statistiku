@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>uslovna.knit</title>
+
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Uvod u verovatoću i statistiku za osnovnu školu</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">O kursu</a>
+</li>
+<li>
+  <a href="Journal.html">Uvod</a>
+</li>
+<li>
+  <a href="Links.html">Eksperiment i ishod eksperimenta</a>
+</li>
+<li>
+  <a href="dog.html">Događaj i verovatnoća događaja</a>
+</li>
+<li>
+  <a href="ocekivanje.html">Matematičko očekivanje</a>
+</li>
+<li>
+  <a href="relacije.html">Relacije na skupovima</a>
+</li>
+<li>
+  <a href="uslovna.html">Uslovna verovatnoća</a>
+</li>
+<li>
+  <a href="uzorak.html">Populacija i uzorak</a>
+</li>
+<li>
+  <a href="graficko_predstavljanje.html">Grafičko predstavljanje podataka</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<p>Razne ankete i kvizovi koje svakodnevno pronalazimo u novinama i na internetu često traže od nas da obeležimo kog smo pola, koliko imamo godina, koje smo nacionalnosti kao i nivo obrazovanja. To se radi da bi se odgovori kategorisali prema raznim osobinama ispitanika. Na primer, odgovori na pitanja koja se tiču politike često variraju u zavisnosti od dela zemlje gde žive. Takođe nivo obrazovanja može da utiče na anketu vezanu za aktuelne teme, poput vakcinacije. Ovi primeri predstavljaju klasičan primer primene uslovne verovatnoće.</p>
+<p><br></p>
+<p><strong>Primer 5.1</strong> U anketi koju su sproveli novinari, ispitano je 700 ljudi na temu : „Da li mislite da je dužina trajanja reklama na kanalima nacionalne frekvencije previše velika tokom emitovanja zabavnog programa, filmova, serija“. Odgovori su prikazani u tabeli:</p>
+<p><img src="tabela5.png" /></p>
+<p><br></p>
+<p>Analiza rezultata: od 700 ljudi, 512 je dalo potvrdan odgovor, što nam govori da većini smeta dužina trajanja reklama. Takođe, do još bitnijeg zaključka dolazimo kada uporedimo brojeve za muškarce i žene. Primećujemo da muškarcima mnogo više smeta dužina trajanja reklama, tj čak <span class="math inline">\(\frac{302}{350}\)</span>=86% muškaraca, dok samo <span class="math inline">\(\frac{210}{350}\)</span>=60% žena smatra da reklame predugo traju.</p>
+<p><br> <br></p>
+<p>Hajde da obeležimo sa slovom Ž obeležimo događaj – odgovor je dala žena, i sa M- odgovor je dao muškarac. Takođe, sa D – odgovor je da i N-odgovor je ne. Tada, događaj da je žena dala potvrdan odgovor bismo zapisali kao:<br />
+<span class="math inline">\(D \mid Ž\)</span> Pri čemu znak | tumačimo kao „pod uslovom“.<br />
+Događaj D | Ž možemo pročitati kao: odgovor je da, pod uslovom da ga je dala žena.<br />
+Verovatnoća ovakvog događaja se naziva <strong>uslovna verovatnoća događaja</strong> .</p>
+<p>Možemo da je izračunamo:</p>
+<p><span class="math display">\[
+P_{D|Ž}=\frac{210}{350}=0.6
+\]</span></p>
+<p><br> <br></p>
+<p><strong>Definicija: Uslovna verovatnoća događaja A u odnosu na događaj B se definiše kao verovatnoća da se realizovao događaj A ako se realizovao događaj B i ona se računa po formuli:</strong> <span class="math display">\[
+P_{A \mid B}=\frac{P_{A \cap B}}{P_B}
+\]</span></p>
+<p><br></p>
+<p><strong>Primer 5.2</strong> Na slučajan način se izvlači jedna karta iz špila od 52 karte. Ako znamo da je izvučena karta herc, odrediti verovatnoću da je ta karta desetka.<br />
+Rešenje. Obeležimo događaj A-slučajno izabrana karta je desetka,<br />
+a događaj B – slučajno izabrana karta je herc.<br />
+Zadatak traži da se odredi verovatnoća događaja <span class="math inline">\(A \mid B\)</span>. U ovom zadatku, <span class="math inline">\(A \cap B\)</span> je događaj da je izabrana karta desetka herc, i njegova verovatnoća je: <span class="math display">\[
+P_{A \cap B}=\frac{1}{52}
+\]</span></p>
+<p>Sada računamo verovatnoću događaja B: <span class="math display">\[
+P_B=\frac{13}{52}
+\]</span></p>
+<p>Jer je ukupan broj karata sa herc simbolom jednak 13.<br />
+Na kraju, dobijene brojeve ubacujemo u formulu uslovne verovatnoće <span class="math display">\[
+P_{A \mid B}=\frac{P_{A \cap B}}{P_B}=\frac{\frac{1}{52}}{\frac{13}{52}}=\frac{1}{13}
+\]</span></p>
+<p><br> <br></p>
+<p>Pre nego što pređemo na jednu važnu formulu, razgraničićemo tri na prvi pogled slična, ali potpuno različita pojma. Posmatramo tabelu:<br />
+<img src="tab.png" /></p>
+<p><br> <br></p>
+<div id="pravilo-proizvoda" class="section level3">
+<h3>Pravilo proizvoda</h3>
+<p>Kako biste odredili verovatnoću da od dve izvučene karte, obe budu herc? Za početak, jednostavno je odrediti verovatnoću da je prva karta herc: <span class="math inline">\(\frac{13}{52}\)</span>. Međutim, kako bismo odredili da je i naredna herc? Kada bismo znali da je prva izvučena karta bila herc – tada bismo znali da je ostalo još 12 herc karata, te je verovatnoća <span class="math inline">\(\frac{12}{51}\)</span></p>
+<p><br></p>
+<p>Transformacijom formule uslovne verovatnoće, možemo dobiti formulu koju zovemo pravilo proizvoda:<br />
+<span class="math display">\[
+P_{A \cap B}=P_{A \mid B}*P_B
+\]</span></p>
+<p><br></p>
+<p>Neka je u primeru sa kartama sa A označen događaj da je druga izvučena karta herc i sa B – događaj da je prva izvučena karta herc.Tada je <span class="math inline">\(P_{A \mid B}\)</span> verovatnoća da je druga izvučena karta herc, pod uslovom da je i prva. Tu verovatnoću smo već računali, i znamo da iznosi <span class="math inline">\(\frac{12}{51}\)</span>.Verovatnoća događaja B je <span class="math inline">\(P_B=\frac{13}{52}\)</span>.<br />
+Verovatnoću događaja – obe karte su herc možemo izračunati kao: <span class="math display">\[
+P_{A \cap B}=\frac{13}{52}*\frac{12}{51}=\frac{3}{51}=0.06
+\]</span></p>
+<p>Dakle, verovatnoća da su obe karte herc je oko 6%.</p>
+<p><br> <br></p>
+<div id="stablo-dijagram" class="section level4">
+<h4>Stablo dijagram</h4>
+<p><img src="stablo1.png" /></p>
+<p>Na slici se nalazi stablo dijagram našeg problema sa kartama. Crtanje nam stabla najčešće pomaže da lakše dođemo do rešenja.</p>
+<p>Na granama stabla se nalaze verovatnoće ishoda do kojih vode. Na primer, verovatnoća da se izvuče karta koja nije herc iz punog špila je 39/52. Verovatnoća da se izvuče karta koja nije herc, nakon što je izvučena karta koja jeste je 39/51.</p>
+<p><br> <br></p>
+<p><strong>Zadaci </strong><br />
+<br></p>
+<p><strong>5.3</strong> U kutiji se nalaze 2 bele i 9 crnih kuglica. Izvlačimo nasumično 2, jednu po jednu, bez vraćanja. Kolika je verovatnoća da izvučemo crnu kuglicu pod uslovom da smo već izvukli belu? Kolika je verovatnoća da ćemo u prvom izvlačenju izvući belu, a u drugom crnu? <img src="kutija.png" /></p>
+<p>Rešenje. Označimo A-događaj da je u drugom izvlačenju izvučena crna kuglica, a B-događaj da je u prvom izvlačenju izvučena bela kuglica. Događaj da je izvučena crna kuglica pri uslovu da je već izvučena bela je događaj <span class="math inline">\(A \mid B\)</span>. Verovatnoću računamo pomoću stablo dijagrama</p>
+<p><img src="stablo2.png" /></p>
+<p>Sa dijagrama možemo da pročitamo da je uslovna verovatnoća koja nam je potrebna(prvo biramo belu pa crnu) jednaka 9/10.<br />
+Verovatnoća da se u prvom izvlačenju izvuče bela, a u drugom crna je verovatnoća preseka događaja A i B, i računamo je po pravilu proizvoda, odnosno:<br />
+<span class="math display">\[
+P_{A \cap B}=P_{A \mid B}*P_B=\frac{\frac{9}{10}*2}{11}=\frac{9}{55}=0.163
+\]</span></p>
+<p><strong>5.4</strong> Bačena je kockica za igru. Naći verovatnoću da je:<br />
+a) Pala šestica</p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>Pala šestica, ako znamo da je pao paran broj</p></li>
+<li><p>Pala šestica, ako znamo da je pao prost broj</p></li>
+</ol>
+<p>Rešenje.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Neka je A-događaj da je pala šestica. <span class="math inline">\(P_A=\frac{1}{6}\)</span></p></li>
+<li><p>Neka je B- događaj da je pao paran broj. <span class="math inline">\(P_B=\frac{1}{2}\)</span></p></li>
+</ol>
+<p>Događaj da je pala šestica, ako znamo da je pao paran broj je zapravo događaj A|B, i njegovu verovatnoću računamo po formuli. Pre toga, treba da kažemo da je presek događaja A i B zapravo sam događaj A, jer je podskup od B, tj. bacanje šestice je podskup od događaja da je bačen paran broj. <span class="math display">\[
+P_{A \mid B}=\frac{P_{A \cap B}}{P_B}=\frac{\frac{1}{6}}{\frac{1}{2}}=\frac{1}{3}
+\]</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Neka je C- događaj da je pao prost broj. <span class="math inline">\(P_C=\frac{3}{6}\)</span>, jer su prosti brojevi do 6 brojevi 2, 3 i 5.</li>
+</ol>
+<p>Događaj da je pala šestica, ako znamo da je pao prost broj je zapravo događaj <span class="math inline">\(A \mid B\)</span>, i njegovu verovatnoću računamo po formuli. Pre toga, treba da kažemo da je presek događaja A i C zapravo prazan skup, jer šest nije prost broj. Dakle, samim tim verovatnoća događaja <span class="math inline">\(A \cap B\)</span> je nula, pa je i verovatnoća događaja <span class="math inline">\(A \mid B\)</span> takođe nula.</p>
+<p><br></p>
+<p><strong>5.5</strong> Proizvođač laptopova kupuje 38% čipova iz Japana, a ostatak iz Amerike. Od čipova iz Japana, 1.7% je neispravno, a iz Amerike 1.1%. Naći verovatnoću da je čip neispravan i napravljen u Americi.</p>
+<p><br></p>
+<p>Rešenje. Neka je A- događaj da je čip neispravan, B – događaj da je čip napravljen u Americi. Traži nam se presek tih događaja, i njega računamo po formuli. <span class="math display">\[
+P_{A \cap B}=P_{A \mid B}*P_B
+\]</span> Znamo da je uslovna verovatnoća događaja A|B zapravo verovatnoća da je čip neispravan, pri uslovu da je napravljen u Americi, i tu verovatnoću znamo i ona je jednaka <span class="math inline">\(\frac{1.1}{100}=0.011\)</span><br />
+Verovatnoća događaja B je <span class="math inline">\(\frac{62}{100}=0.62\)</span><br />
+Vrednosti menjamo u formulu i dobijamo <span class="math display">\[
+P_{A \cap B}=0.011*0.62=0.00682
+\]</span></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
