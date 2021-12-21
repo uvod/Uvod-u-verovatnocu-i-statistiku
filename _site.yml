@@ -1,8 +1,8 @@
-name: "MyLabJournal"
+name: "My website"
 navbar:
-  title: "MyLabJournal"
+  title: "Uvod u verovatocu i statistiku ta osnovnu skolu"
   left:
-    - text: "Home"
+    - text: "Uvod"
       href: index.html
     - text: "Journal"
       href: Journal.html
