@@ -13,6 +13,11 @@ output: html_document
 }
 
 
+</style>
+
+<div class="row" style="padding-top: 30px;">
+<div class="col-sm-6">
+
 Ovaj kratak kurs nastao je kao želja da se pojmovi verovatnoće i statistike prilbliže đacima osnovnih škola. Ohrabrujemo kako učenike, tako i sve nastavnike matematike, koji bi želeli da ovu temu uvedu u okvir predmeta, da koriste ove materijale.
 
 Sadržaj kursa:
@@ -35,10 +40,6 @@ Sadržaj kursa:
 
 
 
-</style>
-
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
 
 
 

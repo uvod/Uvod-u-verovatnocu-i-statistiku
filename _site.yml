@@ -1,11 +1,13 @@
 name: "My website"
 navbar:
-  title: "Uvod u verovatocu i statistiku ta osnovnu skolu"
+  title: "Uvod u verovatoću i statistiku za osnovnu školu"
   left:
     - text: "O kursu"
       href: index.html
     - text: "Uvod"
       href: Journal.html
-    - text: "Links"
+    - text: "Eksperiment i ishod eksperimenta"
+      href: Links.html
+    - text: "Eksperiment i ishod eksperimenta"
       href: Links.html
 output_dir: "docs"
