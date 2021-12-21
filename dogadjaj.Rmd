@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Događaj i verovatnoća događaja"
 output: html_document
 ---
 Podsetimo se, svakom eksperimentu pridružujemo prostor ishoda. To je skup svih mogućih ishoda tog eksperimenta i označava se grčkim slovom $\Omega$(sigma).

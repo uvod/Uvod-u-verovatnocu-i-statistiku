@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Populacija i uzorak"
 output:
   html_document: default
 ---
