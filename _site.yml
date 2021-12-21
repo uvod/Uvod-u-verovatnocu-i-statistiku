@@ -2,9 +2,9 @@ name: "My website"
 navbar:
   title: "Uvod u verovatocu i statistiku ta osnovnu skolu"
   left:
-    - text: "Uvod"
+    - text: "O kursu"
       href: index.html
-    - text: "Journal"
+    - text: "Uvod"
       href: Journal.html
     - text: "Links"
       href: Links.html

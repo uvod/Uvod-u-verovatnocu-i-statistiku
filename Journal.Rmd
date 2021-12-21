@@ -1,128 +1,122 @@
 ---
-title: "Journal"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    collapsed: false
-    number_sections: false
-    toc_depth: 1
-    #code_folding: hide
+title: "Uvod"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
-```
+    
+Sa verovatnoćom se susrećemo celog života i uvek je deo naše svakodnevnice. Na primer, ujutru slušamo vremensku prognozu i često čujemo rečenicu: „Verovatnoća padavina je ...%“.  
 
-IMPORTANT: You can delete everything in here and start fresh. You might want to start by not deleting anything above this line until you know what that stuff is doing.
-
-
-This is an .Rmd file. It is plain text with special features. Any time you write just like this, it will be compiled to normal text in the website. If you put a \# in front of your text, it will create a top level-header.
-
-# My first post
-
-2018 | 7 | 23 Last compiled: `r Sys.Date()`
-
-Notice that whatever you define as a top level header, automatically gets put into the table of contents bar on the left. 
-
-## Second level header
-
-You can add more headers by adding more hashtags. These won't be put into the table of contents
-
-### third level header
-
-Here's an even lower level header
-
-# My second post (note the order)
-
-2018 | 7 | 23 Last compiled: `r Sys.Date()`
-
-I'm writing this tutorial going from the top down. And, this is how it will be printed. So, notice the second post is second in the list. If you want your most recent post to be at the top, then make a new post starting at the top. If you want the oldest first, do, then keep adding to the bottom
-
-# Adding R stuff
-
-So far this is just a blog where you can write in plain text and serve your writing to a webpage. One of the main purposes of this lab journal is to record your progress learning R. The reason I am asking you to use this process is because you can both make a website, and a lab journal, and learn R all in R-studio. This makes everything really convenient and in the sam place. 
-
-So, let's say you are learning how to make a histogram in R. For example, maybe you want to sample 100 numbers from a normal distribution with mean = 0, and standard deviation =1, and then you want to plot a histogram. You can do this right here by using an r code block, like this:
-
-```{r}
-samples <- rnorm(100, mean=0, sd=1)
-hist(samples)
-```
-
-When you knit this R Markdown document, you will see that the histogram is printed to the page, along with the R code. This document can be set up to hide the R code in the webpage, just delete the comment (hashtag), from the cold folding option in the yaml header up top. For purposes of letting yourself see the code, and me see the code, best to keep it the way that it is. You learn all of these things and more can be customized in each R code block.
-
-# The big idea
-
-Use this lab journal to record what you do in R. This way I will be able to see what you are doing and help you along the way. You will also be creating a repository of all the things you do. You can make posts about everything. Learning specific things in R (project unrelated), and doing things for the project that we will discuss at the beginning of the Fall semester. You can get started now by fiddling around with googling things, and trying stuff out in R. I've placed some helpful starting links in the links page on this website
-
-# What can you do right now by yourself?
-
-It's hard to learn programming when you don't have specific problems that you are trying to solve. Everything just seems abstract.
-
-I wrote an [introductory programming book that introduces R](https://crumplab.github.io/programmingforpsych/), and gives some [concrete problems for you to solve](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html). 
-
-To get the hang of journaling and solving the problems to learn programming, my suggestion is that you use this .Rmd file to solve the problems. It would look like this:
-
-# Problem 1
-
-Do simple math with numbers, addition, subtraction, multiplication, division
-
-```{r}
-1+2
-2*5
-5/3
-(1+6+4)/5
-
-```
-
-# Problem 2
-
-Put numbers into variables, do simple math on the variables
-
-```{r}
-a<-1
-b<-2
-a+b
-
-d<-c(1,2,3)
-e<-c(5,6,7)
-d+e
-d*e
-d/e
-
-```
-
-# Problem 3
-
-Write code that will place the numbers 1 to 100 separately into a variable using for loop. Then, again using the seq function.
-
-```{r}
-# for loop solution
-# i becomes the number 1 to 100 at each step of the loop
+![](prognoza.png)
 
 
-a <- length(100) # make empty variable, set length to 100
-for (i in 1:100){
-  a[i] <-i #assigns the number in i, to the ith index of a
-}
+Na putu do škole razmišljamo o verovatnoći da nas nastavnica prozove da odgovaramo. U slobodno vreme, razmišljamo o verovatnoći da naš omiljeni tim postigne gol ili pobedi na prednostojećoj utakmici. Iako ne razmišljamo previše o samom pojmu verovatoće, ona je deo naše stvarnosti i zbog toga je bitno da je bolje razumemo i izučimo.  
 
-print(a)
 
-# for loop solution #2
+| Intersantan je razlog zbog kojeg je jedan matematičar počeo da proučava verovatnoću po prvi put: naime, francuski plemić koji je voleo da se kocka, zamolio je svog prijatelja matematičara da mu objasni zašto gubi toliko novca. Znamo da i danas verovatnoća igra veliku ulogu u radu kladionica.   
 
-a<-c() #create empty variable using combine command
-for (i in 1:100){
-  a<-c(a,i) # keeps combining a with itself and the new number in i
-}
-print(a)
+<br>
+<br>
 
-# seq solution
-a <- seq(1,100,1) # look up help for seq using ?seq() in console
-print(a)
+_Vežba_
 
-```
+| Hajde da probamo da simuliramo problem francuskog plemića. Zarađivao je tako što se kladio da u 4 bacanja može da dobije barem jednu šesticu. Nazovimo takvu seriju uspešnom, a u suprotnom neuspešnom. Bacajte kockicu 4 puta i zabeležite koliko puta ste dobili šesticu. Ponovite postupak 10 puta. Ako ste pred svaku seriju od 4 bacanja uložili 1 bombonu, a za uspešnu seriju dobijate 2, koliko bombona ukupno imate na kraju vežbe?
 
-# Replace this with problem 4
 
-And keep going. Try to solve the problems with different scripts that provide the same solution. Good luck, Happy coding.
+<br>
+<br>
+
+**Igre na sreću**
+
+Takođe, igre na sreću poput loto-a, greb-greb kartica, kao i ruleta i svih igara koje se mogu naći u kazinima koriste načela verovatoće. Verovatno ste primetili da ishod i dobitak u takvim igrama ne zavisi od naših sposobnosti, već samo od nasumičnog izbora brojeva, kako sa naše strane, tako i sa strane raznih mašina. Iz razloga što postoji veliki broj mogućnosti od kojih takmičar bira, šansa za dobitak je mala, ili preciznije, verovatnoća dobitka je mala. Ipak, kako je dobitak u takvim igrama veliki, ljudi često zaobilaze činjenicu da je šansa da osvoje novac mala, tj. praktično ne postoji, i ipak učestvuju u tim igrama.
+
+
+<br>
+<br>
+
+**Genetika**
+
+Da li ste nekad razmišljali zašto se kaže da ličite na majku, a tvoj brat ili sestra na oca? Ili zašto je moguće da jedno dete nasledi plave oči od oca, a drugo braon od majke? Sve se to dešava po zakonima verovatoće koja je ključni deo naše genetike i pravila nasleđivanja. 
+
+![](Baby_eye_color_odds.png)
+
+<br>
+<br>
+Verovatnoća je takođe pronašla veliku primenu u finansijama i predstavlja temelj rada svake banke, osiguravajuće kuće, investicione firme...
+
+<br>
+
+_Primeri_
+
+*	Klasičan primer sa kojim smo se svi sreli je bacanje novčića. Znamo da bacanje novčića ima dva moguća ishoda: da padne glava ili da padne pismo. Da li je verovatnije da će pasti glava ili pismo?
+
+Odgovor, zapravo, zavisi od samog novčića. Ukoliko bacamo običan novčić od, recimo, 5 dinara, možemo biti sigurni da su nam šanse za oba ishoda jednake – u ovom slučaju, po 50%. 
+Iz tog razloga, često viđamo bacanje novčića kao način izbora između dve mogućnosti, ukoliko taj izbor mora biti nasumičan. 
+Na primer, ako biramo koji od 2 igrača je prvi na potezu.  Ovu tehniku koristili su u 1998. u Americi na meču Detorit protiv Pitsburga. Pre početka produžetaka, sudija je bacio novčić kako bi se odlučilo koji tim će imati prvi posed. Iako je igrač Pitsburga uzviknuo „pismo“, sudija je čuo „glava“, i nakon što je palo pismo, posed dodelio suparničkom timu, koji je na kraju, zahvaljujući tome, pobedio. Uprkos velikoj grešci sudije, metod bacanja novčića nastavio je da se koristi u sportu u ovakvim i sličnim situacijama.
+
+* Sličan princip ima i svima poznato bacanje kockice. Za razliku od novčića, koji je imao samo 2, regularna kockica ima 6 ishoda i to su najčešće prvih 6 prirodnih brojeva.  Isto kao i kod novčića, verovatnoća da padne bilo koji od tih brojeva je jednaka, tj. verovatnoća svakog je 1/6, odnosno  približno 16,67.%. Kao što i znamo, najviše se koriste u društvenim igrama. Iako smo svi navikli na standardnu kocnicu sa 6 strana, postoje i kockice sa 4, 10, 48 ili čak 120 strana.
+
+<br>
+<br>
+
+_Zadaci_
+
+
+<br>
+
+1. Ako bacate novčić 20 puta, koliko približno puta će pasti glava, a koliko pismo?
+
+Rešenje.  Ne možemo reći sa sigurnošću tačan broj. Međutim, znamo da je verovatnoća oba ishoda jednaka, pa možemo da pretpostavimo da će najverovatnije pasti 10 pisama i 10 glava.
+
+<br>
+
+2. Neka se bacaju 2 kockice istovremeno*. Koliko ima ishoda gde je zbir brojeva koji padnu paran?
+
+Rešenje.  Zbir dva broja je paran ukoliko su oba parna ili oba neparna. To znači da nama odgvoaraju sledeće kombinacije:
+
+![](tabela1.png)
+
+Dakle, ukupan broj ishoda koji nam odgovaraju je 12.  
+
+*Ukoliko naglasimo da se bacanja dešavaju istovremeno, znači da ne razlikujemo ishode 1+3 i 3+1, tj. registrujemo samo brojeve, nezavisno od redosleda.
+
+<br>
+
+3. Bacamo pet novčića. Na koliko različitih načina se mogu pojaviti tačno četiri glave?
+
+Rešenje.  Ako sa P označimo da je palo pismo a sa G da je pala glava, mogući slučajevi su predstavljeni na slikama:
+
+![](novcici.jpg)
+
+
+<br>
+
+4. Ako delimo 26 karata iz špila karata, koliko će najverovatnije biti crvenih i koliko će najvervatnije biti kečeva?
+
+Rešenje.  Pravilan špil ima 52 karte. Polovina njih je crvena, a druga polovina crna. Postoje 4 keca. 
+Ako delimo 26 karata, to je polovina od ukupnog broja karata u špilu. To znači da će u 26 karata takođe najverovatnije polovina biti crvena, a druga polovina crna. 
+Tako da je odgovor da će najverovatnije biti 13 crvenih karata.
+U 26 karata najverovatnije će, po istom principu, biti 2 keca. 
+
+<br>
+
+5. Iz špila delimo 13 karata. Koliko će prilbižno biti ukupno kraljeva, dama i žandara?
+
+Rešenje.  13 karata je četvrtina špila. Kraljeva, dama i žandara ima po 4, odnosno ukupno 12 u celom špilu. To znači da će najverovatnije, u četvrtini špila biti 3.
+
+<br>
+
+6. U kutiji se nalaze ljubičaste i roze loptice. Nasumično iz kutije izvlačimo jednu lopticu. Da li je veća verovatnoća da izvučemo ljubičastu ili roze lopticu? Ako smo izvadili jednu roze lopticu, koju boju izvlačimo sa većom verovatnoćom?
+
+![](loptice.jpg)
+
+Rešenje.  Na slici ima 5 roze i 4 ljubičastih loptica. Kako je više rozih, veća je verovatnoća da se izvuče roze loptica.
+Ako smo izvukli roze lopticu, tada nam ostaje 4 roze i 4 ljubičaste. Pošto ih ima jednak broj, jednaka je verovatnoća da bilo koja od njih bude izvučena. 
+
+<br>
+
+7. U tri kutije nalazi se, redom, 5, 15 i 35 bombona. U svakoj kutiji je jedna bombona čokoladna, a ostale od višnje. Da li je verovatnije da izvučemo bombonu od čokolade ili višnje iz druge kutije? Iz koje kutije je najverovatnije da izvučemo čokoladnu bombonu? Iz koje kutije je najverovatnije da ćemo izvući bombonu od višnje?
+
+![](jedna bombona.jpg)
+
+Kako u drugoj kutiji ima 1 bombona od čokolade, a 14 od višnje, veća je verovatnoća da se izvuče bombona od višnje.   
+U prvoj kutiji od 5 bombona, jedna je čokoladna, pa je verovatnoća da nju izaberemo 1/5. Na isti način, verovatnoće da izvučemo čokoladnu bombonu iz druge i treće kutije su redom 1/15 i 1/35. Od ta tri broja, 1/5 je najveći, pa je verovatnoća da izvučemo čokoladnu bombonu najveća za prvu kutiju.  
+U prvoj kutiji, od 5 bombona, jedna je čokoladna, pa je ostalih 4 od višnje, te je verovatnoća da izvučemo bombonu od višnje iz prve kutije 4/5. Na sličan način, verovatnoće da izvučemo iz druge i treće kutije su, redom, 14/15 i 34/35. Od ta tri broja, najveći je 34/35, pa je ta verovatnoća najveća za treću.
